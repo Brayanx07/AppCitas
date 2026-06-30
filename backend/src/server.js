@@ -4,6 +4,9 @@ import dotenv from 'dotenv';
 
 import authRoutes from './routes/auth.routes.js';
 import clinicaRoutes from './routes/clinica.routes.js';
+import servicioRoutes from './routes/servicio.routes.js';
+import horarioRoutes from './routes/horario.routes.js';
+import disponibilidadRoutes from './routes/disponibilidad.routes.js';
 
 dotenv.config();
 
@@ -20,6 +23,9 @@ app.use(express.json());
 // Rutas
 app.use('/api/auth', authRoutes);
 app.use('/api/clinicas', clinicaRoutes);
+app.use('/api/servicios', servicioRoutes);
+app.use('/api/horarios', horarioRoutes);
+app.use('/api/disponibilidad', disponibilidadRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
