@@ -1,0 +1,25 @@
+.notfound {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 2rem;
+  background: var(--blue-50);
+}
+
+.notfound__icon { font-size: 4rem; }
+
+.notfound__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.notfound__desc {
+  color: var(--gray-500);
+  font-size: 1rem;
+  max-width: 400px;
+}
