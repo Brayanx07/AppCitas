@@ -243,7 +243,7 @@ export default function ConfiguracionPage() {
   ];
 
   return (
-    <div className="min-h-screen flex font-sans" style={{ backgroundColor: tema.light }}>
+    <div className="citahn-admin min-h-screen flex font-sans" style={{ backgroundColor: tema.light }}>
       {/* ===================== SIDEBAR ===================== */}
       <aside className="w-64 shrink-0 bg-white border-r border-gray-100 flex flex-col min-h-screen">
         {/* Logo + nombre */}

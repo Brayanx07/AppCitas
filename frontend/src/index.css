@@ -1,4 +1,5 @@
 /* ===== Tailwind (solo tema + utilidades; sin preflight para no romper estilos existentes) ===== */
+@layer theme, base, components, utilities;
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
@@ -233,3 +234,42 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--gray-100); }
 ::-webkit-scrollbar-thumb { background: var(--blue-200); border-radius: 99px; }
+
+/* ===== Reset local para el panel admin (mini-preflight en @layer base) =====
+   Va en @layer base para que las utilidades de Tailwind (bg-*, border-*, etc.)
+   siempre puedan sobrescribirlo. */
+@layer base {
+  /* Bordes al estilo Tailwind: ancho 0 por defecto, estilo sólido, color actual.
+     Así las utilidades border / border-2 funcionan sin el preflight global. */
+  .citahn-admin *,
+  .citahn-admin *::before,
+  .citahn-admin *::after {
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+  }
+  .citahn-admin button {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+  .citahn-admin input,
+  .citahn-admin textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    font: inherit;
+    color: inherit;
+    background-color: #fff;
+    outline: none;
+  }
+  .citahn-admin select {
+    font: inherit;
+    color: inherit;
+    background-color: #fff;
+  }
+  .citahn-admin img { display: block; max-width: 100%; }
+}
