@@ -1,0 +1,412 @@
+/* ===== LOADING / ERROR ===== */
+.clinica-loading,
+.clinica-error {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  background: var(--blue-50);
+  padding: 2rem;
+}
+
+.clinica-loading p  { color: var(--gray-500); }
+.clinica-error__icon { font-size: 3.5rem; }
+.clinica-error h2   { font-size: 1.5rem; color: var(--gray-900); }
+.clinica-error p    { color: var(--gray-500); }
+
+/* ===== LAYOUT ===== */
+.clinica-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--gray-50);
+}
+
+/* ===== HEADER ===== */
+.clinica-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.clinica-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.clinica-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.clinica-header__logo {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  border: 2px solid var(--blue-100);
+}
+
+.clinica-header__logo-placeholder {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--blue-600);
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.clinica-header__nombre {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  line-height: 1.2;
+}
+
+.clinica-header__ciudad {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.15rem;
+}
+
+/* ===== HERO ===== */
+.clinica-hero {
+  background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-600) 100%);
+  color: var(--white);
+  padding: 2.5rem 0;
+}
+
+.clinica-hero__desc {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 680px;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.clinica-hero__badges {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.clinica-hero__badges .badge-blue {
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+  backdrop-filter: blur(4px);
+}
+
+.clinica-hero__badges .badge-green {
+  background: rgba(16,185,129,0.2);
+  color: #A7F3D0;
+}
+
+/* ===== MAIN ===== */
+.clinica-main {
+  flex: 1;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+/* ===== SECTIONS ===== */
+.clinica-section {
+  margin-bottom: 2.5rem;
+}
+
+.clinica-section__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.clinica-section__title svg {
+  color: var(--blue-600);
+  flex-shrink: 0;
+}
+
+/* ===== SERVICIOS ===== */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.servicio-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.servicio-card:hover {
+  border-color: var(--blue-400);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.servicio-card__icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--blue-50);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.servicio-card__info { flex: 1; }
+
+.servicio-card__info h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 0.25rem;
+}
+
+.servicio-card__info p {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.servicio-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.servicio-card__meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.78rem;
+  color: var(--gray-500);
+}
+
+.servicio-card__precio {
+  font-weight: 700;
+  color: var(--blue-600) !important;
+  font-size: 0.9rem !important;
+}
+
+.servicio-card__arrow {
+  color: var(--blue-400);
+  font-size: 1.1rem;
+  align-self: center;
+}
+
+/* ===== DOS COLUMNAS ===== */
+.clinica-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* ===== HORARIOS ===== */
+.horarios-list {
+  padding: 0;
+  overflow: hidden;
+}
+
+.horario-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--gray-100);
+  transition: background var(--transition);
+}
+
+.horario-row:last-child { border-bottom: none; }
+.horario-row:hover { background: var(--blue-50); }
+
+.horario-row__dia {
+  font-weight: 600;
+  color: var(--gray-800);
+  font-size: 0.9rem;
+}
+
+.horario-row__horas {
+  font-size: 0.88rem;
+  color: var(--blue-600);
+  font-weight: 600;
+  background: var(--blue-50);
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
+}
+
+/* ===== DOCTORES ===== */
+.doctores-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.doctor-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition);
+}
+
+.doctor-card:hover { border-color: var(--blue-300); }
+
+.doctor-card__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-600), var(--blue-400));
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doctor-card__nombre {
+  font-weight: 600;
+  color: var(--gray-900);
+  font-size: 0.92rem;
+}
+
+.doctor-card__especialidad {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-top: 0.1rem;
+}
+
+/* ===== CONTACTO ===== */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.contacto-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contacto-item__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-400);
+}
+
+.contacto-item a {
+  color: var(--blue-600);
+  font-weight: 500;
+  font-size: 0.92rem;
+  transition: color var(--transition);
+}
+
+.contacto-item a:hover { color: var(--blue-800); }
+
+.contacto-item__wa { color: var(--success) !important; }
+.contacto-item__wa:hover { color: #059669 !important; }
+
+/* ===== FOOTER ===== */
+.clinica-footer {
+  background: var(--gray-900);
+  color: var(--gray-400);
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 0.82rem;
+}
+
+.clinica-footer strong { color: var(--blue-400); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .clinica-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .clinica-header__inner .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .clinica-hero { padding: 1.75rem 0; }
+  .clinica-hero__desc { font-size: 1rem; }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clinica-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .clinica-main {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clinica-header__nombre { font-size: 1.05rem; }
+}
+
+/* Acciones del encabezado (Reservar + Admin) */
+.clinica-header__actions {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .clinica-header__actions { width: 100%; flex-direction: column; }
+}
