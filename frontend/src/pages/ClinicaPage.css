@@ -400,3 +400,13 @@
 
   .clinica-header__nombre { font-size: 1.05rem; }
 }
+
+/* Acciones del encabezado (Reservar + Admin) */
+.clinica-header__actions {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .clinica-header__actions { width: 100%; flex-direction: column; }
+}
