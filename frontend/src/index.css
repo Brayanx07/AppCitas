@@ -1,3 +1,7 @@
+/* ===== Tailwind (solo tema + utilidades; sin preflight para no romper estilos existentes) ===== */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
 /* ===== RESET & BASE ===== */
 *, *::before, *::after {
   box-sizing: border-box;
